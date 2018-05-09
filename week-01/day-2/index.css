@@ -1,0 +1,70 @@
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    border: none;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #ff0099;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+body {
+    max-width: 1300px;
+    margin: auto;
+    background-image: url("file:///C:/Users/lugal/OneDrive/Desktop/Greenfox/week1/day1/1.png");
+}
+
+h1, h2, h3 {
+    font-family: 'Slabo 27px', serif;
+}
+
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+div#name {
+    font-size: 20px;
+    margin: 40px 0px 20px 0px;
+}
+
+div#rank {
+     color: #ff0099;
+     font-size: 20px;
+}
+
+div#elvalaszto {
+    text-align: center;
+    
+}
+
+div#wikih2 {
+    text-align: center;
+    font-size: 25px;
+}
+
