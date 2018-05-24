@@ -12,20 +12,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Power.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Power.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Power.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="306">
+              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SumDigit.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SumDigit.java">
+      <file leaf-file-name="Bunny1.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Bunny1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -46,6 +46,7 @@
         <option value="$PROJECT_DIR$/src/NumberAdder.java" />
         <option value="$PROJECT_DIR$/src/SumDigit.java" />
         <option value="$PROJECT_DIR$/src/Power.java" />
+        <option value="$PROJECT_DIR$/src/Bunny1.java" />
       </list>
     </option>
   </component>
@@ -58,7 +59,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="675" />
     <option name="width" value="1252" />
     <option name="height" value="1047" />
@@ -108,7 +109,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Power">
+  <component name="RunManager" selected="Application.Bunny1">
+    <configuration name="Bunny1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Bunny1" />
+      <module name="Counter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
     <configuration name="Counter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Counter" />
       <module name="Counter" />
@@ -175,9 +181,11 @@
       <item itemvalue="Application.NumberAdder" />
       <item itemvalue="Application.SumDigit" />
       <item itemvalue="Application.Power" />
+      <item itemvalue="Application.Bunny1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Bunny1" />
         <item itemvalue="Application.Power" />
         <item itemvalue="Application.SumDigit" />
         <item itemvalue="Application.NumberAdder" />
@@ -195,12 +203,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527152675892</updated>
-      <workItem from="1527152679161" duration="5875000" />
+      <workItem from="1527152679161" duration="7565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5875000" />
+    <option name="totallyTimeSpent" value="7565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="675" y="0" width="1252" height="1047" extended-state="0" />
@@ -274,8 +282,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Power.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="306">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bunny1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

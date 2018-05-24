@@ -2,7 +2,7 @@ public class Power {
     public static void main(String[] args) {
 
 
-        int sumPower = powerFun(4,4);
+        int sumPower = powerFun(5,5);
         System.out.println(sumPower);
     }
 
