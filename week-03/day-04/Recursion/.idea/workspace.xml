@@ -15,17 +15,35 @@
       <file leaf-file-name="Power.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Power.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bunny1.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bunny1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bunny1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="340">
+              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bunny2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bunny2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String1.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/String1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -47,6 +65,9 @@
         <option value="$PROJECT_DIR$/src/SumDigit.java" />
         <option value="$PROJECT_DIR$/src/Power.java" />
         <option value="$PROJECT_DIR$/src/Bunny1.java" />
+        <option value="$PROJECT_DIR$/src/TicTacToe.java" />
+        <option value="$PROJECT_DIR$/src/Bunny2.java" />
+        <option value="$PROJECT_DIR$/src/String1.java" />
       </list>
     </option>
   </component>
@@ -59,8 +80,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="675" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="687" />
     <option name="width" value="1252" />
     <option name="height" value="1047" />
   </component>
@@ -109,19 +130,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Bunny1">
+  <component name="RunManager" selected="Application.Bunny2">
     <configuration name="Bunny1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Bunny1" />
       <module name="Counter" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Counter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Counter" />
-      <module name="Counter" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="NumberAdder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NumberAdder" />
+    <configuration name="Bunny2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Bunny2" />
       <module name="Counter" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -132,6 +148,11 @@
     </configuration>
     <configuration name="SumDigit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SumDigit" />
+      <module name="Counter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="TicTacToe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TicTacToe" />
       <module name="Counter" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -177,19 +198,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Counter" />
-      <item itemvalue="Application.NumberAdder" />
       <item itemvalue="Application.SumDigit" />
       <item itemvalue="Application.Power" />
       <item itemvalue="Application.Bunny1" />
+      <item itemvalue="Application.Bunny2" />
+      <item itemvalue="Application.TicTacToe" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Bunny2" />
+        <item itemvalue="Application.TicTacToe" />
         <item itemvalue="Application.Bunny1" />
         <item itemvalue="Application.Power" />
         <item itemvalue="Application.SumDigit" />
-        <item itemvalue="Application.NumberAdder" />
-        <item itemvalue="Application.Counter" />
       </list>
     </recent_temporary>
   </component>
@@ -203,20 +224,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527152675892</updated>
-      <workItem from="1527152679161" duration="7565000" />
+      <workItem from="1527152679161" duration="14974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7565000" />
+    <option name="totallyTimeSpent" value="14974000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="675" y="0" width="1252" height="1047" extended-state="0" />
+    <frame x="687" y="0" width="1252" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.3273743" />
+      <window_info anchor="bottom" id="Messages" weight="0.32731378" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
@@ -224,11 +245,11 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33521444" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33521444" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1795302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1795302" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -280,17 +301,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Power.java">
+    <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state>
+          <caret selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bunny1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="340">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Power.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bunny2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/String1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
         </state>
       </provider>
     </entry>

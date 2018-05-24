@@ -2,7 +2,7 @@ public class Bunny1 {
 
     public static void main(String[] args) {
 
-        System.out.println(sumOfEars(10));
+        System.out.println(sumOfEars(112));
     }
 
     private static int sumOfEars(int number) {
