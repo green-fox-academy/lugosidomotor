@@ -2,15 +2,19 @@ public class Counter {
     public static void main(String[] args) {
 
 
-        int sum = sumWithRecursion( 1000);
-        System.out.println(sum);
+        int n = countDown( 10);
+        System.out.println(n);
     }
 
-    private static int sumWithRecursion(int limit) {
-        if (limit == 1) {
+    private static int countDown(int countFrom) {
+
+        if (countFrom == 1) {
             return 1;
         } else {
-            return limit + sumWithRecursion(limit - 1);
+            System.out.println(countFrom);
+            return countDown(countFrom - 1);
+
+
         }
     }
 }
