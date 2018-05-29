@@ -9,13 +9,13 @@ public class String1 {
     }
 
     private static String chnageChars(String change) {
-        String afterChange = "y";
+        String changeChar = "y";
+        String afterChange = "";
 
         if (change.length() > 0) {
             return "y";
         } else {
-            
-
+            changeChar + change.split([.length - 1])
         }
     }
 }
