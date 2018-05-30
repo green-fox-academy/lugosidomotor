@@ -1,9 +1,9 @@
 public interface Flyable {
 
-  public land();
+  void land();
 
-  public fly ();
+  void fly ();
 
-  public takeOff();
+  void takeOff();
 
 }
