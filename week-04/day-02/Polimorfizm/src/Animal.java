@@ -1,10 +1,11 @@
-public class Animal {
+public abstract class Animal {
 
 
   private int weight;
-  private  String name;
+  private String name;
 
-  private void makeShout() {
+
+  public void makeShout() {
     System.out.println("AAAAAA");
   }
 
