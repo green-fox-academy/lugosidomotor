@@ -11,4 +11,6 @@ public abstract class StringedInstrument extends Instrument {
   public void setNumberOfStrings(int numberOfStrings) {
     this.numberOfStrings = numberOfStrings;
   }
+
+
 }
