@@ -7,11 +7,8 @@ public class ElectricGuitar extends StringedInstrument {
   }
 
 
-  String intoduction = "Electric Guitar, a " + getNumberOfStrings() + "-stringed instrument that goes Twangg";
-
-
   public void play(){
-    System.out.println(intoduction);
+    System.out.println("Twangg");
   }
 
 }
