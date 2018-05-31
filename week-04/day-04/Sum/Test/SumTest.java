@@ -31,10 +31,10 @@ public class SumTest {
     assertEquals(sumOftestList,Sum.getSum(testList));
   }
 
-//  @Test
-//  public void sumTestWithNull(){
-//
-//    assertEquals(null,Sum.getSum(null));
-//  }
+  @Test
+  public void sumTestWithNull(){
+
+    assertEquals(42,Sum.getSum(null));
+  }
 
 }
