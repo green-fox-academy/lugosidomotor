@@ -6,6 +6,8 @@ import static org.junit.Assert.*;
 public class ApplesTest {
 
   String expectedValue1 = "apple";
+  String expectedValue2 = "apple_fail";
+
 
   @Test
   public void testReturnString(){
