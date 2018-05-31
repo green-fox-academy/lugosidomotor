@@ -1,15 +1,17 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class ApplesTest {
 
+  String expectedValue1 = "apple";
+
   @Test
-  public static
+  public void testReturnString(){
 
-  Apples testApple1 = new Apples();
-
-  public  assertEquals() {
+    Apples testApple = new Apples();
+    assertEquals(expectedValue1, testApple.getApple());
 
   }
 }
