@@ -11,23 +11,24 @@ public class Anagram {
   }
 
   public static boolean IsAnagram(String firstWord, String secondWord) {
-    return sortString(firstWord.replace(" ","").toLowerCase()).contains(sortString(secondWord.replace(" ","").toLowerCase()));
+    return sortString(firstWord.replace(" ","").toLowerCase()).contains
+            (sortString(secondWord.replace(" ","").toLowerCase()));
   }
 
-//  public static boolean anagramOld(String stringOne, String stringTwo) {
-//
-//    if (stringOne.length() != stringTwo.length()) {
-//      return false;
-//    } else {
-//      for (int i = 0; i <= stringOne.length(); i++) {
-//        if (sortString(stringOne).charAt(i) == sortString(stringTwo).charAt(i)) {
-//          return true;
-//        }else{
-//          return false;
-//        }
-//      }
-//    }return true;
-//  }
+  public static boolean anagramOld(String stringOne, String stringTwo) {
+
+    if (stringOne.length() != stringTwo.length()) {
+      return false;
+    } else {
+      for (int i = 0; i <= stringOne.length(); i++) {
+        if (sortString(stringOne).charAt(i) == sortString(stringTwo).charAt(i)) {
+          return true;
+        }else{
+          return false;
+        }
+      }
+    }return true;
+  }
 }
 
 
