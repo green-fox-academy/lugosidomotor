@@ -28,4 +28,3 @@ public static List<Integer> getTheEvensWithStream (ArrayList<Integer> numbers) {
             .collect(Collectors.toList());
   }
 }
-

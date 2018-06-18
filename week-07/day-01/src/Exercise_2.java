@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Exercise_2 {
 
@@ -12,14 +10,16 @@ public class Exercise_2 {
     System.out.println(getTheSumOfOddsWithStream(numbers));
   }
 
-  public static Integer getTheSumOfOdds (ArrayList<Integer> numbers){
+  public static double getTheSumOfOdds (ArrayList<Integer> numbers){
     Integer sumOfOdds = 0;
+    double oddsCounter = 0;
     for (int i = 0; i < numbers.size(); i++) {
       if (numbers.get(i) % 2 != 0){
         sumOfOdds += numbers.get(i);
+        oddsCounter++;
       }
     }
-    return sumOfOdds / numbers.size();
+    return sumOfOdds / oddsCounter;
   }
 
   public static double getTheSumOfOddsWithStream (ArrayList<Integer> numbers) {
@@ -30,4 +30,3 @@ public class Exercise_2 {
             .getAsDouble();
   }
 }
-

@@ -1,11 +1,12 @@
+import java.util.stream.Collectors;
+
 public class Exercise_5 {
 
   public static void main(String[] args) {
 
     String content = "Write a Stream Expression to find the uppercase characters in a string!";
     System.out.println(getTheNumberOfUppercases(content));
-    getTheNumberOfUppercasesWithStream(content);
-
+    System.out.println(getTheNumberOfUppercasesWithStream(content));
   }
 
   public static Integer getTheNumberOfUppercases(String content) {
@@ -18,10 +19,11 @@ public class Exercise_5 {
     return counter;
   }
 
-  public static void getTheNumberOfUppercasesWithStream(String content) {
-    content.chars()
+  public static Integer getTheNumberOfUppercasesWithStream(String content) {
+    return content.chars()
             .filter(Character::isUpperCase)
             .mapToObj(s -> (char)s)
-            .forEach(System.out::print);
+            .collect(Collectors.toList())
+            .size();
   }
 }
