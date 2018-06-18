@@ -46,12 +46,10 @@ public static ArrayList<Fox> findTheGreen (ArrayList<Fox> foxes){
     return greensAndPallida;
   }
 
-
   public static List<Fox> findTheGreenAndPallidaWithStream (ArrayList<Fox> foxes) {
     return foxes.stream()
             .filter(fox -> fox.color == "green" && fox.type == "pallida" )
             .collect(Collectors.toList());
   }
-
 }
 
