@@ -9,7 +9,7 @@ public class Exercise_3 {
 
     ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14));
     System.out.println(getTheSquare(numbers));
-    System.out.println(getTheEvensWithStream(numbers));
+    System.out.println(getTheSquareWithStream(numbers));
   }
 
   public static ArrayList<Integer> getTheSquare (ArrayList<Integer> numbers){
@@ -22,7 +22,7 @@ public class Exercise_3 {
     return square;
   }
 
-  public static List<Integer> getTheEvensWithStream (ArrayList<Integer> numbers) {
+  public static List<Integer> getTheSquareWithStream (ArrayList<Integer> numbers) {
     return numbers.stream()
             .filter(n -> n % 2 == 0)
             .map( n -> n * n)
