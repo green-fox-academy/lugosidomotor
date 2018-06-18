@@ -1,5 +1,3 @@
-
-
 public class Exercise_5 {
 
   public static void main(String[] args) {
@@ -24,7 +22,6 @@ public class Exercise_5 {
     content.chars()
             .filter(Character::isUpperCase)
             .mapToObj(s -> (char)s)
-            .filter(s -> s.isUpperCase(s))
             .forEach(System.out::print);
   }
 }
