@@ -2,26 +2,50 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Births {
 
   public static void main(String[] args) {
 
-//    int freq = Collections.frequency(Births("./births.txt"), "a" );
-//    System.out.println(freq);
-
-
-    System.out.println(births("./births.txt"));
-
-
+    System.out.println(tellTheHighestValue((countLetters(getDate(readTheFile("./Births.txt"))))));
 
   }
 
-  public static List<String> births(String filename) {
+  public static String tellTheHighestValue (Map<String, Integer> mapOfYears){
+
+    int tempValue = 0;
+    String highestValue = "";
+
+    for (Map.Entry value : mapOfYears.entrySet()){
+      if ((Integer) value.getValue() > tempValue){
+        tempValue = (Integer) value.getValue();
+      }
+    }
+    for (String years : mapOfYears.keySet()){
+      if (mapOfYears.get(years).equals(tempValue)){
+        highestValue = years;
+      }
+    }
+
+
+    return highestValue;
+
+  }
+
+
+  public static Map countLetters(List<String> years) {
+    Map<String, Integer> mapOfYears = new HashMap<>();
+    for (int i = 0; i < years.size(); i++) {
+      if (!mapOfYears.containsKey(years.get(i))) {
+        mapOfYears.put(years.get(i),1);
+      }else{
+        mapOfYears.put(years.get(i),  mapOfYears.get(years.get(i)) +1);
+              }
+    } return mapOfYears;
+  }
+
+  public static List<String> readTheFile(String filename) {
 
     List<String> content = new ArrayList<>();
     Path path = Paths.get(filename);
@@ -31,25 +55,17 @@ public class Births {
       e.printStackTrace();
     }
     return content;
-
-
-
   }
 
-
-//  public static List<String> splitEverything(List<String> original) {
-//    String cleaned = original.toString();
-//
-//    List<String> cleaner = Arrays.asList(cleaned.toLowerCase().split("[, ./!?]"));
-//
-//
-//    }return cleaner;
-//  }
-
-
-
-
-
-
-
+  public static List<String> getDate(List<String> original) {
+    List<String> justDates = new ArrayList<>();
+    List<String> justYears = new ArrayList<>();
+    for (String lines : original){
+    justDates.add(lines.split(";")[1]);
+    }
+    for (String dates : justDates){
+      justYears.add(dates.split("-")[0]);
+    }
+    return justYears;
+  }
 }

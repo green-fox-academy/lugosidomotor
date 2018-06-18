@@ -7,7 +7,7 @@ public class PetRockTest {
   @Test
   public void getName() {
     PetRock rocky = new PetRock("Rocky");
-    assertEquals("Rocky", rocky.getName());
+    assertEquals("Rocky", getTrickyAvg());
   }
 
   @Test
