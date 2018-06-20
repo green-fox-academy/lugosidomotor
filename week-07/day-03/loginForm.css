@@ -58,6 +58,17 @@ input[type=button] {
     border: 0px solid #000000;
 }
 
+.pass{
+    position: relative;
+}
+
+.pass i{
+    position: absolute;
+    right: 70px;
+    top: 9px;
+}
+
+
 h3 {
     margin-left: 15%;
     padding-bottom: 10px;
