@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Bank of Simba accounts</title>
+</head>
+<body>
+<h1>Bank of Simba accounts</h1>
+<div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Moral</th>
+            <th>Pump the MONEY!</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+    <tbody>
+    <tr th:unless="${#lists.isEmpty(accounts)}" th:each="account : ${accounts}" th:object="${account}">
+        <td th:text="'#' + ${accountStat.index}"> </td>
+        <td th:text="*{name}"> </td>
+        <td th:text="*{#numbers.formatDecimal({balance} , 0, 'NONE', 2, 'POINT')}"></td>
+        <td th:text="*{animalType}"></td>
+        <td th:text="*{status}"></td>
+        <td th:if="*{moral} == '+++'"> ♥ </td>
+        <td th:unless="*{moral} == '+++'"> ╭∩╮（︶︿︶）╭∩╮ </td>
+        <td> <button type="button"> Money up!</button> </td>
+
+    </tr>
+    </tbody></table>
+</div>
+</body>
+</html>
+
+
+
