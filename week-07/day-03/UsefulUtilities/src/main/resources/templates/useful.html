@@ -6,6 +6,12 @@
 </head>
 <body>
 <h1>Useful Stuff</h1>
-<a href="/useful/colored">Colored Background</a>
+<a href="/useful/colored">Colored Background</a> <br>
+<p> ------------------------</p>
+<form th:action="'email?email=' + name">
+    <input type="text" th:name="email" />
+    <input type="submit" />
+</form>
+<p> ------------------------</p>
 </body>
 </html>
