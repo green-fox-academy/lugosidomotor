@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Tamagotchi project</title>
@@ -13,11 +13,14 @@
     <li><a href="http://localhost:8080/trickcenter">Trick Center</a></li>
 </ul>
 
-<img src="https://raw.githubusercontent.com/green-fox-academy/teaching-materials/master/project/programmer-fox-club/assets/greenfox.png?token=Akc5beecPX5ErWg3hHo2kg-uzP-XVKwnks5bPf5_wA%3D%3D">
-<p>This is Mr. Fox. Currently living on pizza and lemonade. He knows 0 tricks.</p>
+<img src="https://orig00.deviantart.net/b2cf/f/2011/196/e/c/little__fox__animation__by_hyperchaotix-d3sv1s9.gif"/>
+<p th:text="'This is ' + ${name} + '. Currently living on ' + ${food} + ' and ' + ${drink} + '. He knows ' + ${trickCount} + ' tricks.'"></p>
 
 <h1>Known tricks</h1>
-<p>John Snow.</p>
+<!--<ul style="list-style-type:disc">-->
+<!--<li th:if="${#lists.isEmpty(tricks)}" th:text= "John Show"></li>-->
+<!--<li th:unless="${#lists.isEmpty(tricks)}" th:each="trick : ${tricks}" th:text="${trick}"></li>-->
+<!--</ul>-->
 
 </body>
 </html>

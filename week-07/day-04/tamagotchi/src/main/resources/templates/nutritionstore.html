@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" xmlns:th="http://wwww.thymeleaf.org">
     <title>Nutrition Store</title>
@@ -12,23 +12,14 @@
     <li><a href="http://localhost:8080/trickcenter">Trick Center</a></li>
 </ul>
 
-
 <td> Food
     <select id='food' name='food' autofocus >
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>2</option>
-        <option value='4'>2</option>
-        <option value='5'>2</option>
+        <option th:each="food : ${foodList}" th:text="${food.name}"></option>
     </select>
 </td>
 <td> Drink
     <select id='drink' name='drink' autofocus >
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>2</option>
-        <option value='4'>2</option>
-        <option value='5'>2</option>
+        <option th:each="drink : ${drinkList}" th:text="${drink.name}"></option>
     </select>
 </td>
 <input type="submit" value="Change" />

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8" xmlns:th="http://wwww.thymeleaf.org">
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <title>Trick Center</title>
 </head>
 <body>
@@ -14,15 +14,10 @@
 
 <td> Tricks
     <select id='trikcs' name='trikcs' autofocus >
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>2</option>
-        <option value='4'>2</option>
-        <option value='5'>2</option>
+        <option th:each="trick : ${trickList}" th:text="${trick.name}"></option>
     </select>
     <input type="submit" value="Learn" />
 
 </td>
-
 </body>
 </html>
