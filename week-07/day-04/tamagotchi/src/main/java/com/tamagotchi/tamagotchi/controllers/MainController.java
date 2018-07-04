@@ -62,8 +62,8 @@ public class MainController {
 
   @PostMapping("/login")
   public String login(@RequestParam("username") String foxName, Model model) {
-    model.addAttribute("foxLogin", foxService.login(foxName));
-    return "redirect:/" + foxName;
+    foxService.login(foxName);
+    return "redirect:/login/" + foxName;
   }
 
   @GetMapping("/login/{username}")
