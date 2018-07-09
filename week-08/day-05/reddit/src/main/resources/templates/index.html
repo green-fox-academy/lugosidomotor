@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reddit coppycat</title>
+</head>
+<body>
+<h1>Reddit copycat</h1>
+
+<article th:each="post : ${posts}" >
+
+    <button type="submit" value="Submit">+</button>
+    <button type="reset" value="Reset">-</button>
+    <p th:text="${post.posted} + '  ' + ${post.title} + '  ' + ${post.like}"> </p>
+
+</article>
+</body>
+</html>
