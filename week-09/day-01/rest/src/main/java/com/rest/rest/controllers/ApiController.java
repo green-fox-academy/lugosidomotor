@@ -20,44 +20,48 @@ public class ApiController {
   }
 
   @GetMapping("/greeter")
-  public Object greeter(
-          @RequestParam(value = "name", required = false) String name,
-          @RequestParam(value = "title", required = false) String title){
+  public Object greeter(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "title", required = false) String title) {
     if (name != null && title != null) {
       return (new GreeterModel(name, title));
-    }else if (name == null){
+    } else if (name == null) {
       return (new ErrorMessage("Please provide a name!"));
     }
-      return (new ErrorMessage("Please provide a title!"));
+    return (new ErrorMessage("Please provide a title!"));
   }
 
   @GetMapping("/appenda/{appendable}")
   public Object appendA(@PathVariable(value = "appendable", required = false) String append) {
-     if (append != null){
-       return (new AppendA(append));
-     }return "redirect:/404";
+    if (append != null) {
+      return (new AppendA(append));
+    }
+    return "redirect:/404";
   }
 
   @PostMapping("/dountil/{what}")
-  public Object dountil(@PathVariable(value = "what", required = false) String what, @RequestBody(required = false) DoUntil dountil){
-      if (what.equals("sum")) {
-        return (new DoUntilResult(appService.sum(dountil.getUntil())));
-      }else if (what.equals("factor")){
-        return (new DoUntilResult(appService.factor(dountil.getUntil())));
-    }return (new ErrorMessage("Please provide a number!"));
+  public Object dountil(@PathVariable(value = "what", required = false) String what, @RequestBody(required = false) DoUntil dountil) {
+    if (what.equals("sum")) {
+      return (new DoUntilResult(appService.sum(dountil.getUntil())));
+    } else if (what.equals("factor")) {
+      return (new DoUntilResult(appService.factor(dountil.getUntil())));
+    }
+    return (new ErrorMessage("Please provide a number!"));
   }
 
 
-  @PostMapping("/arrays/{what}")
-  public Object arrays (@RequestBody(required = false) Array array){
-    if (array.getWhat().equals("sum")) {
-      return (new Array (array.getWhat(),appService.sumNumbers(array.getNumbers());
-    }else if (array.getWhat().equals("multiply")){
-      return (new Array (array.getWhat(),appService.multiplyNumbers(array.getNumbers());
-    }else if (array.getWhat().equals("double")){
-      return (new Array (array.getWhat(),appService.doubleNumbers(array.getNumbers());
-
+  @PostMapping("/arrays")
+  public Object arrays(@RequestBody(required = false) Array array) {
+    if (array.getWhat() != null) {
+      return (new ErrorMessage("null array"));
+    } else {
+        if (array.getWhat().equals("sum")) {
+        return (new ArrayResultInt(array.getWhat(), appService.sumNumbers(array.getNumbers())));
+      } else if (array.getWhat().equals("multiply")) {
+        return (new ArrayResultInt(array.getWhat(), appService.multiplyNumbers(array.getNumbers())));
+      } else if (array.getWhat().equals("double")) {
+        return (new ArrayResult(array.getWhat(), appService.doubleNumbers(array.getNumbers())));
+      }
     }return (new ErrorMessage("Please provide a number!"));
-  }
 
+  }
 }
+

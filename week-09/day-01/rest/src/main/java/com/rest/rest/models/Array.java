@@ -1,15 +1,19 @@
 package com.rest.rest.models;
 
+import java.util.ArrayList;
+
 public class Array {
 
   private String what;
-  private int [] numbers;
+  private ArrayList<Integer> numbers;
 
-  public Array(String what, int[] numbers) {
+  public Array() {
+  }
+
+  public Array(String what, ArrayList<Integer> numbers) {
     this.what = what;
     this.numbers = numbers;
   }
-
 
   public String getWhat() {
     return what;
@@ -19,11 +23,13 @@ public class Array {
     this.what = what;
   }
 
-  public int[] getNumbers() {
+  public ArrayList<Integer> getNumbers() {
     return numbers;
   }
 
-  public void setNumbers(int[] numbers) {
+  public void setNumbers(ArrayList<Integer> numbers) {
     this.numbers = numbers;
   }
 }
+
+
