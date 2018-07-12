@@ -1,7 +1,6 @@
 package com.todo.todo.services;
 
 import com.todo.todo.models.Todos;
-
 import java.util.List;
 
 public interface TodoService {
@@ -10,5 +9,4 @@ public interface TodoService {
   Todos findById(long id);
   void save(Todos todo);
   void delete(long id);
-
 }

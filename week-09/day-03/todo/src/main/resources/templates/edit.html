@@ -8,7 +8,6 @@
 
 <h1> Edit Todo </h1>
 
-
 <form action="#" th:action="@{/edit}" th:object="${todo}" method="post">
     <div>
         <input type="hidden" th:field="*{id}">
@@ -20,7 +19,6 @@
     </div>
     <input type="submit" value="Submit">
 </form>
-
 
 </body>
 </html>

@@ -20,9 +20,6 @@ public class TodoController {
     return "index";
   }
 
-
-
-
   @GetMapping("/edit/{id}")
   public String getEditPage(@PathVariable (value = "id") long id, Model model){
    model.addAttribute("todo", todoService.findById(id));
@@ -35,7 +32,6 @@ public class TodoController {
     return "redirect:/";
   }
 
-
   @PostMapping("/add")
   public String addNewTodo(@ModelAttribute Todos todo){
     todoService.save(todo);
@@ -47,9 +43,5 @@ public class TodoController {
     todoService.delete(id);
     return "redirect:/";
   }
-
-
-
-
 }
 

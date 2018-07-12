@@ -11,6 +11,4 @@ public interface TodoRepository extends CrudRepository<Todos, Long> {
 
   List<Todos> findAll();
   Todos findById(long id);
-
-
 }

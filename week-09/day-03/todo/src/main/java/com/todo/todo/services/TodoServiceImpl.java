@@ -21,7 +21,6 @@ public class TodoServiceImpl implements TodoService {
 //    return list;
     return todoRepository.findAll();
     // ehhez átírtam a repoban a visszatérést
-
   }
 
   @Override
@@ -39,5 +38,4 @@ public class TodoServiceImpl implements TodoService {
   public void delete(long id) {
     todoRepository.delete(findById(id));
   }
-
 }
