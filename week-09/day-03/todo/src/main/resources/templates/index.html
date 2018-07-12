@@ -6,36 +6,62 @@
 </head>
 <body>
 
-<h1> Cím </h1>
+<h1> Todos </h1>
+
+<form action="/add" method="post" th:object="${newTodo}">
+    <label for="newTodo">Add new Todo: </label>
+    <input id="newTodo" type="text" th:field="*{action}">
+    <input type="submit" th:value="submit">
+</form>
+
+<div>
+    <p></p>
+</div>
 
 
 <table class="tablelist">
     <thead>
     <tr>
-        <th>Name</th>
-        <th>City</th>
+        <th>ID</th>
+        <th>ACTION</th>
+        <th>DONE</th>
+        <th>URGENT</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
     </tr>
     </thead>
 
     <tbody>
     <tr>
-    <tr th:each="attraction : ">
-        <td th:text="${attraction.attrName}"></td>
-        <td th:text="${attraction.city}"></td>
+    <tr th:each="todo : ${todos}" th:object="${todo}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{action}"></td>
+        <td th:text="*{done}"></td>
+        <td th:text="*{urgent}"></td>
+        <td>
+            <form action="#" th:action="'/edit/' + *{id}" method="get">
+                <input type="submit" th:value="Edit">
+            </form>
+        </td>
+        <td>
+            <form action="#" th:action="'/delete/' + *{id}" method="post">
+                <input type="submit" th:value="Delete">
+            </form>
+        </td>
     </tr>
     </tr>
     </tbody>
 </table>
 
 
-<form action="#" th:action="@{/add}" th:object="" method="post">
-    <div>
-        <input type="hidden" th:field="*{id}">
-        <label for="nameLb">Name: </label>
-        <input type="text" id="nameLb" name="attrName" th:field="*{attrName}" required>
-    </div>
-    <input type="submit" value="Submit">
-</form>
+<!--<form action="#" th:action="@{/add}" th:object="" method="post">-->
+    <!--<div>-->
+        <!--<input type="hidden" th:field="*{id}">-->
+        <!--<label for="nameLb">Name: </label>-->
+        <!--<input type="text" id="nameLb" name="attrName" th:field="*{attrName}" required>-->
+    <!--</div>-->
+    <!--<input type="submit" value="Submit">-->
+<!--</form>-->
 
 
 </body>
