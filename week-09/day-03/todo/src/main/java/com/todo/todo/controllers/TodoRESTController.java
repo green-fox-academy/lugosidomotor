@@ -9,15 +9,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rest")
 public class TodoRESTController {
 
   @Autowired
   TodoServiceImpl todoService;
 
-  @GetMapping
+  @GetMapping("/rest")
   public ResponseEntity<?> getTodo() {
     List<Todos> todos = todoService.findAll();
     return ResponseEntity.ok().body(todos);
   }
+
+  @PostMapping("/restadd")
+  public ResponseEntity<?> addNewTodo(@RequestBody Todos todo) {
+    todoService.save(todo);
+    return ResponseEntity.status(HttpStatus.CREATED).body(todo);
+  }
+
 }
