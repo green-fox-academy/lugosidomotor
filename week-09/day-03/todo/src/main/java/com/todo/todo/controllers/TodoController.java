@@ -2,6 +2,7 @@ package com.todo.todo.controllers;
 
 import com.todo.todo.models.Todos;
 import com.todo.todo.services.TodoService;
+import com.todo.todo.services.TodoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class TodoController {
 
   @Autowired
-  TodoService todoService;
+  TodoServiceImpl todoService;
 
   @GetMapping("/")
   public String getIndexPage(Model model){
