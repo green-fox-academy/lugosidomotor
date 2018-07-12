@@ -1,9 +1,13 @@
 package com.todo.todo.models;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 public class Todos {
@@ -15,13 +19,18 @@ public class Todos {
   private boolean done;
   private boolean urgent;
 
+  @CreationTimestamp
+  private LocalDateTime createDateTime;
+
+
   public Todos() {
+
   }
 
   public Todos(String action) {
     this.action = action;
-    this.done = false;
-    this.urgent = false;
+    this.done = done;
+    this.urgent = urgent;
   }
 
   public long getId() {
@@ -54,5 +63,13 @@ public class Todos {
 
   public void setUrgent(boolean urgent) {
     this.urgent = urgent;
+  }
+
+  public LocalDateTime getCreateDateTime() {
+    return createDateTime;
+  }
+
+  public void setCreateDateTime(LocalDateTime createDateTime) {
+    this.createDateTime = createDateTime;
   }
 }

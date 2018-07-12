@@ -28,11 +28,11 @@
         <th>URGENT</th>
         <th>EDIT</th>
         <th>DELETE</th>
+        <th>CREATED</th>
     </tr>
     </thead>
 
     <tbody>
-    <tr>
     <tr th:each="todo : ${todos}" th:object="${todo}">
         <td th:text="*{id}"></td>
         <td th:text="*{action}"></td>
@@ -48,7 +48,7 @@
                 <input type="submit" th:value="Delete">
             </form>
         </td>
-    </tr>
+        <td th:text="*{createDateTime}"></td>
     </tr>
     </tbody>
 </table>
