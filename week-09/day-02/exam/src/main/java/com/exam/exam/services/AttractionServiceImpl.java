@@ -1,5 +1,4 @@
 package com.exam.exam.services;
-
 import com.exam.exam.models.Attractions;
 import com.exam.exam.repositories.AttractionRepository;
 import org.springframework.beans.factory.annotation.Autowired;

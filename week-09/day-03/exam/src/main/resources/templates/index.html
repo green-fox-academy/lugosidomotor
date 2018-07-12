@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<h1> Cím </h1>
+
+
+<table class="tablelist">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr th:each="attraction : ${attractions} ">
+        <td th:text="${attraction.attrName}"></td>
+        <td th:text="${attraction.city}"></td>
+        <td th:text="${attraction.category}"></td>
+        <td th:text="${attraction.price}"></td>
+        <td th:text="${attraction.recommendedAge}"></td>
+        <td th:text="${attraction.longitude}"></td>
+        <td th:text="${attraction.lattitude}"></td>
+        <td th:text="${attraction.duratiob}"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+<form action="/add" th:object="${newAttraction}" method="post">
+    <div>
+        <input type="hidden" th:field="*{id}">
+
+        <label for="nameLb">Name: </label>
+        <input type="text" id="nameLb"  th:field="*{attrName}" required><br>
+
+        <label for="1">Name: </label>
+        <input type="text" id="1"  th:field="*{city}" required><br>
+
+        <label for="2">Category: </label>
+        <input type="text" id="2"  th:field="*{category}" required><br>
+
+        <label for="3">Price: </label>
+        <input type="text" id="3"  th:field="*{price}" required><br>
+
+        <label for="4">RAge: </label>
+        <input type="text" id="4"  th:field="*{recommendedAge}" required><br>
+
+        <label for="5">Long: </label>
+        <input type="text" id="5" th:field="*{longitude}" required><br>
+
+        <label for="6">Latt: </label>
+        <input type="text" id="6"  th:field="*{lattitude}" required><br>
+
+        <label for="7">Duration: </label>
+        <input type="text" id="7"  th:field="*{duratiob}" required><br>
+
+
+
+
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>

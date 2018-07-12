@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ToDos</title>
+</head>
+<body>
+
+<h1> Cím </h1>
+
+
+<table class="tablelist">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+    <tr th:each="attraction : ">
+        <td th:text="${attraction.attrName}"></td>
+        <td th:text="${attraction.city}"></td>
+    </tr>
+    </tr>
+    </tbody>
+</table>
+
+
+<form action="#" th:action="@{/add}" th:object="" method="post">
+    <div>
+        <input type="hidden" th:field="*{id}">
+        <label for="nameLb">Name: </label>
+        <input type="text" id="nameLb" name="attrName" th:field="*{attrName}" required>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
