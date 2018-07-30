@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Todo Application</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="mainCSS.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<h1> ToDo Application </h1>
+
+<form action="#" th:action="@{/add}" th:object="${newtodo}" method="post">
+    <div>
+        <label for="nameLb">Add new TODO: </label>
+        <input type="text" id="nameLb" name="attrName" th:field="*{content}" required>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+<span style="display:block; height: 50px;"></span>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>TODO</td>
+            <td>URGENT</td>
+            <td>DONE</td>
+            <td>CREATED</td>
+            <td>EDIT</td>
+            <td>DELETE</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="todo : ${todos}" th:object="${todo}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{content}"></td>
+            <td th:text="*{urgent}"></td>
+            <td th:text="*{done}"></td>
+            <td th:text="*{#temporals.format(date, 'yyyy-MM-dd HH:mm')}"></td>
+            <td>
+                <form action="#" th:action="'/edit/'+ *{id}" method="get">
+                    <div>
+                        <input type="submit" value="edit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form action="#" th:action="'/delete/'+ *{id}" method="post">
+                    <div>
+                    <input type="submit" value="delete">
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
