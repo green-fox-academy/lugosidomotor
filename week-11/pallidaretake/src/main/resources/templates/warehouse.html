@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Shoppingplanner</title>
+</head>
+<body>
+
+<h1> Green Fox Fashion Web Store </h1>
+
+<form action="#" th:action="@{/add}" method="post">
+
+    <select >
+        <option th:each="dress : ${summary}" th:text="${dress.itemName}" ></option>
+    </select>
+
+    <!--<select >-->
+        <!--<option th:each="size : ${clothes}" th:object="${size}" th:text="*{size}" ></option>-->
+    <!--</select>-->
+
+    <input type="number" id="number" name="number" required>
+
+<input type="submit" value="Submit">
+</form>
+
+
+<table class="tablelist">
+    <thead>
+    <tr>
+        <th>Item name</th>
+        <th>Manufacturer</th>
+        <th>Category</th>
+        <th>Size</th>
+        <th>Unit price</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+    <tr th:each="dress : ${clothes}" th:object="${dress}">
+        <td th:text="*{itemName}"></td>
+        <td th:text="*{manufacturer}"></td>
+        <td th:text="*{category}"></td>
+        <td th:text="*{size}"></td>
+        <td th:text="*{unitPrice}"></td>
+
+
+    </tr>
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+
+</body>
+</html>
