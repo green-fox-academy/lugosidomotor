@@ -39,11 +39,21 @@ public class NumberServiceImpl implements NumberService {
   public String message(NumberModel numberModel) {
     String result = "No result yet!";
     if (isItNumber(numberModel)) {
-      result = "Succes! The saved numbers: " + numberModel.getFirstNumber() + " " + numberModel.getSecondNumber() + " " + numberModel.getThirdNumber() + " " + numberModel.getFourthNumber();
+      result = "Succes! The saved numbers: " + numberModel.getFirstNumber() + "   " + numberModel.getSecondNumber() + "   " + numberModel.getThirdNumber() + "   " + numberModel.getFourthNumber();
     } else {
       result = "Go fuck yourself!";
     }
     return result;
 
+  }
+
+  @Override
+  public int sum(NumberModel numberModel) {
+    int one = Integer.parseInt(numberModel.getFirstNumber());
+    int two = Integer.parseInt(numberModel.getSecondNumber());
+    int three = Integer.parseInt(numberModel.getThirdNumber());
+    int four = Integer.parseInt(numberModel.getFourthNumber());
+    int sum = one + two + three + four;
+    return sum;
   }
 }

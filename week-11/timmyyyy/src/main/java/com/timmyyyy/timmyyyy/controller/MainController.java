@@ -31,7 +31,8 @@ public class MainController {
 
   @GetMapping("/sum")
   public String sumNumbers(@RequestParam(name = "sumID") long id, Model model) {
-    model.addAttribute("sum", numberService.findById(id));
+    model.addAttribute("object", numberService.findById(id));
+    model.addAttribute("sum", numberService.sum(numberService.findById(id)));
     return "sum";
   }
 

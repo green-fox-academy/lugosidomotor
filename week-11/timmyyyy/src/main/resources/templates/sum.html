@@ -8,7 +8,8 @@
 
 <h1 style="color:#ff565e"> SUM </h1>
 
-<p th:text="${sum.id} "></p>
+<p th:text="'Numbers in this model: '+ ${object.firstNumber} + '  ' + ${object.secondNumber} + '  ' + ${object.thirdNumber} + '  ' + ${object.fourthNumber} "></p>
+<p th:text="'The sum of these numbers:  ' + ${sum}"></p>
 
 <a href="/">Back to index</a>
 

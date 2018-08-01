@@ -41,10 +41,10 @@
 <p>########################################################################</p>
 
 <h2>Square</h2>
-<form action="#" th:action="@{/square}"  method="get" >
+<form action="#" th:action="@{/square}" th:object="${allNumberModel}" method="get" >
     <label for="square"> Select the id: </label><br/>
-    <select id="square">
-        <option th:each="model: ${allNumberModel}"  th:object="${model}" th:text="*{id}" ></option>
+    <select id="square" name="squareID">
+        <option th:each="model: ${allNumberModel}"  th:text="${model.id}" th:value="${model.id}">
     </select>
     <input type="submit" value="Submit">
 </form>

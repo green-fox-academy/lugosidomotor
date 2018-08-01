@@ -13,4 +13,5 @@ public interface NumberService {
   List<NumberModel> findAll();
   NumberModel findById(long id);
   String message(NumberModel numberModel);
+  int sum(NumberModel numberModel);
 }
