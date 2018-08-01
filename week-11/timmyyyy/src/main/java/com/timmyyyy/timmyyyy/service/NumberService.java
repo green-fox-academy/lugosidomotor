@@ -14,4 +14,5 @@ public interface NumberService {
   NumberModel findById(long id);
   String message(NumberModel numberModel);
   int sum(NumberModel numberModel);
+  List<Integer> square(NumberModel numberModel);
 }

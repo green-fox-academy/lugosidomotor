@@ -36,5 +36,13 @@ public class MainController {
     return "sum";
   }
 
+  @GetMapping("/square")
+  public String squareNumbers(@RequestParam(name = "squareID") long id, Model model) {
+    model.addAttribute("object", numberService.findById(id));
+    model.addAttribute("square", numberService.square(numberService.findById(id)));
+    return "square";
+  }
+
+
 
 }

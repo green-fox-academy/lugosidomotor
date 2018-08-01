@@ -5,6 +5,7 @@ import com.timmyyyy.timmyyyy.repository.NumberRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -44,7 +45,6 @@ public class NumberServiceImpl implements NumberService {
       result = "Go fuck yourself!";
     }
     return result;
-
   }
 
   @Override
@@ -55,5 +55,19 @@ public class NumberServiceImpl implements NumberService {
     int four = Integer.parseInt(numberModel.getFourthNumber());
     int sum = one + two + three + four;
     return sum;
+  }
+
+  @Override
+  public List<Integer> square(NumberModel numberModel){
+    List<Integer> square = new ArrayList<>();
+    int one = Integer.parseInt(numberModel.getFirstNumber());
+    int two = Integer.parseInt(numberModel.getSecondNumber());
+    int three = Integer.parseInt(numberModel.getThirdNumber());
+    int four = Integer.parseInt(numberModel.getFourthNumber());
+    square.add(one*one);
+    square.add(two*two);
+    square.add(three*three);
+    square.add(four*four);
+    return square;
   }
 }

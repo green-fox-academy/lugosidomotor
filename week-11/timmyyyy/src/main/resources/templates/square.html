@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>SUM</title>
+    <title>SQUARE</title>
 </head>
 <body>
 
-<h1 style="color:#ff565e"> SUM </h1>
+<h1 style="color:#ff565e"> SQUARE </h1>
 
 <p th:text="'Numbers in this model: '+ ${object.firstNumber} + '  ' + ${object.secondNumber} + '  ' + ${object.thirdNumber} + '  ' + ${object.fourthNumber} "></p>
-<p th:text="'The sum of these numbers:  ' + ${sum}"></p>
+<p th:text="'The squares of these numbers:  ' + ${square.get(0)} + '  ' + ${square.get(1)} + '  ' + ${square.get(2)} + '  ' + ${square.get(3)}"></p>
 
 <a href="/">Back to index</a>
 
