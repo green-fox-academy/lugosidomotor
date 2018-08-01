@@ -58,12 +58,13 @@ public class NumberServiceImpl implements NumberService {
   }
 
   @Override
-  public List<Integer> square(NumberModel numberModel){
-    List<Integer> square = new ArrayList<>();
-    int one = Integer.parseInt(numberModel.getFirstNumber());
-    int two = Integer.parseInt(numberModel.getSecondNumber());
-    int three = Integer.parseInt(numberModel.getThirdNumber());
-    int four = Integer.parseInt(numberModel.getFourthNumber());
+  public List<Long> square(NumberModel numberModel){
+    List<Long> square = new ArrayList<>();
+
+    Long one = Long.parseLong(numberModel.getFirstNumber());
+    Long two = Long.parseLong(numberModel.getSecondNumber());
+    Long three = Long.parseLong(numberModel.getThirdNumber());
+    Long four = Long.parseLong(numberModel.getFourthNumber());
     square.add(one*one);
     square.add(two*two);
     square.add(three*three);

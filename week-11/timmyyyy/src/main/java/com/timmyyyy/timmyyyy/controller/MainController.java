@@ -42,7 +42,4 @@ public class MainController {
     model.addAttribute("square", numberService.square(numberService.findById(id)));
     return "square";
   }
-
-
-
 }
