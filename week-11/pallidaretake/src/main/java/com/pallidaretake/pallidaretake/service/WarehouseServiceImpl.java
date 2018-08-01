@@ -2,6 +2,7 @@ package com.pallidaretake.pallidaretake.service;
 import com.pallidaretake.pallidaretake.model.Warehouse;
 import com.pallidaretake.pallidaretake.repository.WarehouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,9 +25,23 @@ public class WarehouseServiceImpl implements WarehouseService{
   }
 
   @Override
-  public List<Warehouse> findDistinctByItemName() {
-    return warehouseRepository.findDistinctByItemName();
+  public List<String> allItemName() {
+    List<String> allItemName = new ArrayList<String>();
+    warehouseRepository.findAll().stream()
+            .map(i -> i.getItemName())
+            .distinct()
+            .map(i -> allItemName.add(i));
+    return allItemName;
   }
 
+  @Override
+  public List<String> allItemSize() {
+    List<String> allItemSize = new ArrayList<String>();
+    warehouseRepository.findAll().stream()
+            .map(i -> i.getSize())
+            .distinct()
+            .map(i -> allItemSize.add(i));
+    return allItemSize;
+  }
 
 }

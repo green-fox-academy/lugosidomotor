@@ -22,13 +22,15 @@ public class MainController {
     return "redirect:/warehouse";
   }
 
-
   @GetMapping("/warehouse")
   public String getIndexPage(Model model){
     model.addAttribute("clothes",warehouseService.findAll());
-    model.addAttribute("summary",warehouseService.findDistinctByItemName());
+    model.addAttribute("names",warehouseService.allItemName());
+    model.addAttribute("sizes",warehouseService.allItemSize());
     return "warehouse";
   }
+
+
 
 
 }

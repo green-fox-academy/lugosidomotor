@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+</head>
+<body>
+
+<h1 style="color: chocolate" > Magic with numbers </h1>
+
+<div>
+    <form action="#" th:action="@{/saveNewNumberModel}" th:object="${newNumbers}" method="post" >
+        <div>
+            <!--<input type="hidden" th:field="*{id}">-->
+            <label for="number1">Add the numbers: </label><br/>
+            <input type="text" id="number1" name="number1" th:field="*{firstNumber}" required>
+            <input type="text" id="number2" name="number2" th:field="*{secondNumber}" required>
+            <input type="text" id="number3" name="number3" th:field="*{thirdNumber}" required>
+            <input type="text" id="number4" name="number4" th:field="*{fourthNumber}" required>
+        </div>
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+<div>
+<h3>Result</h3>
+    <p style="color:red" th:text="${message}" ></p>
+</div>
+
+<p>########################################################################</p>
+
+<h2> Sum</h2>
+<form action="#" th:action="@{/sum}" th:object="${allNumberModel}" method="get" >
+    <label for="sum"> Select the id: </label><br/>
+        <select id="sum" name="sumID">
+            <option th:each="model: ${allNumberModel}"  th:text="${model.id}" th:value="${model.id}">
+        </select>
+    <input type="submit" value="Submit">
+</form>
+
+<p>########################################################################</p>
+
+<h2>Square</h2>
+<form action="#" th:action="@{/square}"  method="get" >
+    <label for="square"> Select the id: </label><br/>
+    <select id="square">
+        <option th:each="model: ${allNumberModel}"  th:object="${model}" th:text="*{id}" ></option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+
+<p>########################################################################</p>
+
+</body>
+</html>

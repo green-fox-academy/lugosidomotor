@@ -1,13 +1,12 @@
-package com.pallidaretake.pallidaretake;
+package com.timmyyyy.timmyyyy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PallidaretakeApplication {
+public class TimmyyyyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PallidaretakeApplication.class, args);
+		SpringApplication.run(TimmyyyyApplication.class, args);
 	}
-
 }
