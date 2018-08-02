@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Szeksz in da Huli</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<section>
+    <!--for demo wrap-->
+    <h1>Szeksz in da Húli</h1>
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+            <tr>
+                <th>More</th>
+                <th>Csáje</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+            <tr>
+                <td>
+                    <img th:src="${boy.getPicLink()}"  width="410,2" height="280" style="align-content: center">
+                </td>
+                <td>
+                    <img th:src="${girl.getPicLink()}" width="410,2" height="280" style="align-content: center">
+                </td>
+
+            </tr>
+            <tr>
+                <td th:text="${boy.getName()}"></td>
+                <td th:text="${girl.getName()}"></td>
+            </tr>
+
+            <tr>
+            <tr>
+                <td th:text="'Szekszuális ragadozások száma: '+ ${boy.getSexCounter()}"></td>
+                <td th:text="'Szekszuális ragadozások száma: '+ ${girl.getSexCounter()}"></td>
+            </tr>
+            </tr>
+
+            <tr>
+                <td th:text="'Szekszuális pávör: ' + ${boy.getPower()}"></td>
+                <td th:text="'Szekszuális pávör: ' + ${girl.getPower()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<h1 style="color: #0d00ff" th:text="'Ha ők ketten találkoznak: ' + ${result}"> Házasság</h1>
+
+<h1> <a href="/">ÚJ PÁRT KÉREK!</a></h1>
+
+
+<!-- follow me template -->
+<div class="made-with-love">
+    Made with
+    <i>♥</i> by
+    <a target="_blank" >Dönci</a>
+</div>
